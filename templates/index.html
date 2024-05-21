@@ -1,15 +1,21 @@
-<h1>Hello World!!!</h1>
+{% extends 'base.html' %}
 
-<p>This is NOT my first HTML page</p>
+{% block content %}
 
-<p>This is soooooo cooool!!!!</p>
-<p>My name is {{ first_name|upper }}. Nice to meet you!</p>
+    <h1>Hello World!!!</h1>
 
-<p>{{ stuff|safe }}</p>
-<p>{{ stuff|striptags }}</p>
+    <p>This is NOT my first HTML page</p>
 
-<h3>Favorite pizzaz: </h3>
-{% for pizza in pizzas %}
-{#    <ul><li>{{ pizza }}</li></ul>#}
-    {{ pizza }}<br>
-{% endfor %}
+    <p>This is soooooo cooool!!!!</p>
+    <p>My name is {{ first_name|upper }}. Nice to meet you!</p>
+
+    <p>{{ stuff|safe }}</p>
+    <p>{{ stuff|striptags }}</p>
+
+    <h3>Favorite pizzaz: </h3>
+    {% for pizza in pizzas %}
+        {#    <ul><li>{{ pizza }}</li></ul>#}
+        {{ pizza }}<br>
+    {% endfor %}
+
+{% endblock %}
